@@ -1,0 +1,413 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*
+===============================
+Customs styles
+===============================
+*/
+.body{
+	background: #070707;
+	color: #888;
+	font: 300 16px/22px "Open Sans", "Helvetika Neue", "Helvetika", "Arial", "Sans-Serif";
+}
+img{
+	float: left;
+	max-width: 15%;
+	max-height: 15%;
+}
+
+/*
+===============================
+Links
+===============================
+*/
+.icon {
+	position: absolute;
+	top: 123%;
+	left: 32%;
+}
+.icon a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: #eee;
+	border-radius: 25px;
+	margin: 20px;
+	box-shadow: 3px 3px 10px #aeaeae,
+	-4px -4px 10px white;
+	text-align: center;
+	line-height: 40px;
+	font-size: 25px;
+	border:3px solid #eee;
+	color: #333;
+	transition: .3s;
+}
+
+.icon a:hover {
+	animation: border .6s alternate infinite linear;
+	background-color: #333;
+	color: #eee;
+}
+
+@keyframes border {
+	0% {
+		border:3px solid lightgreen;
+	}
+	50% {
+		border:3px solid salmon;
+	}
+	100% {
+		border:3px solid skyblue;
+	}
+}
+
+/*
+===============================
+Grid
+===============================
+*/
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.container,
+.grid{
+	margin:3px auto;
+	width: 960px;
+}
+.col-1-3{
+	padding-left: 100px;
+	padding-right: 100px;
+	
+}
+
+
+.col-1-3,
+.col-2-3{
+	display: inline-table;
+}
+.col-1-3{
+	width:33.33%;
+}
+.col-2-3{
+	width:66.66%;
+}
+
+
+.grid,
+.col-1-3,
+.col-2-3{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/*
+===============================
+Clearfix code
+===============================
+*/
+
+.group:before,
+.group:after{
+	content: "";
+	display: table;
+}
+.group:after{
+	clear: both;
+}
+
+.group{
+	clear: both;
+	*zoom:1;
+}
+
+
+/*
+===============================
+Rows
+===============================
+*/
+.row{
+	background: #fff;
+	min-width: 960px;
+	padding: 66px 0 44px 0;
+}
+
+/*
+===============================
+Typography
+===============================
+*/
+p {
+	color: #648880;
+
+}
+h1,h2,h3,h4{
+	color: #19b2b9;
+}
+
+
+h1,h3,h4,h5,p{
+	margin-bottom: 22px;
+}
+
+h1{
+	font-size: 36px;
+	line-height: 44px;
+}
+h2{
+	font-size: 24px;
+	line-height: 44px;
+}
+h3{
+	font-weight: 900;
+	font-size: 22px;
+	
+}
+h8{
+	color: black;
+	font-weight: 900;
+	font-size: 22px;
+}
+h4{
+	font-size: 18px;
+}
+h5{
+	color: #19b2b9;
+	font-size: 20px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+strong{
+	font-weight: 400;
+}
+cite,
+em{
+	font-style: italic;
+
+}
+
+
+a{
+	color: #648880;
+	text-decoration: none;
+}
+a:hover{
+	color: #a9b2b9; 
+}
+.primary-header a,
+.primary-footer a{
+	color: #fff;
+}
+.primary-header a:hover,
+.primary-footer a:hover{
+	color: #648880;
+}
+
+
+
+/*
+===============================
+Buttons
+===============================
+*/
+.btn{
+	border-radius: 5px;
+	display: inline-block;
+	margin: 5px;
+	color: #fff;
+	font-weight: 700;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+}
+
+.btn-alt{
+	border: 1px solid #fff;
+	padding: 10px 30px;
+}
+.btn-alt:hover{
+	background: #fff;
+	color: #648880;
+}
+.btn-pur{
+	border=0;
+	background: #648880;
+	padding: 11px 30px;
+}
+.btn-pur:hover {
+	
+	background: #77a198;
+}
+.flex{
+	list-style: none;
+	margin: 10px;
+	display: inline-flexbox;
+}
+
+/*
+===============================
+Primary Header
+===============================
+*/
+.logo{
+	border-top: 4px solid #648880;
+	padding: 40px 0px 22px 0px;
+	font-size: 44px;
+	line-height: 48px;
+	float:left;
+}
+.tagline{
+	margin: 66px 0 22px 0;
+	text-align: right;
+}
+
+.primary-nav{
+	font-size: 14px ;
+	font-weight: 400;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+}
+
+/*
+===============================
+Primary footer
+===============================
+*/
+.primary-footer small{
+	float:left;
+}
+.primary-footer{
+	color: #648880;
+	font-size: 14px;
+	padding-bottom: 44px;
+	padding-top: 44px;
+
+}
+
+/*
+===============================
+Navigation
+===============================
+*/
+.nav{
+	text-align: right;
+}
+/*
+===============================
+Home
+===============================
+*/
+.intro{
+	
+	line-height: 44px;
+	padding: 22px 80px 66px 80px;
+	text-align: center;
+}
+.intro h2{
+	font-size: 36px;
+}
+.intro p{
+	color: #fff;
+	font-size: 24px;
+}
+.teaser a:hover h3{
+	color: #a9b2b9;
+}
+form{
+	margin-bottom: 22px ;
+}
+input,
+select,
+textarea{
+	font: 300 16px/22px "Open Sans", "Helvetika Neue", "Helvetika", "Arial", "Sans-Serif";
+}
+.register-group input,
+.register-group select,
+.register-group textarea{
+	border: 1px solid #c6c9cc;
+	border-radius: 5px;
+	color: #888;
+	display: block;
+	margin: 5px 0 27px 0;
+	padding: 5px 8px;
+}
+.register-group input,
+.register-group textarea{
+	width: 60%;
+}
+.register-group select{
+	height: 34px;
+	width:60px;
+}
+.register-group textarea{
+	height: 78px;
+}
+.merits{
+	list-style: square;
+	margin: 0 0 22px 30px;
+}
+.merits2{
+	text-align: center;
+	margin: 0 0 22px 30px;
+
+}
+
+/*
+===============================
+Courses
+===============================
+*/
+.course{
+	text-align: center;
+	display: block;
+}
